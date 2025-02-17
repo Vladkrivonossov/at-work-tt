@@ -1,0 +1,62 @@
+@use '../../styles/colors.scss';
+@use '../../styles/typography.scss';
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
+    &__heading {
+        color: colors.$color-01;
+        @include typography.text2-medium-16;
+    }
+
+    &__input-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 100%;
+    }
+
+    &__input {
+        @include typography.text2-medium-16;
+        border: 1px solid colors.$color-03;
+        border-radius: 50px;
+        color: colors.$color-02;
+        outline: none; 
+        width: 100%; 
+        padding: 10px 30px 10px 16px;
+
+        @media (max-width: 767) {
+            @include typography.text2-medium-14-mobile;
+        }
+
+        &:focus {
+            color: colors.$color-01;
+            border-color: colors.$color-03;
+        }
+    }
+
+    &__button {
+        opacity: 0;
+        position: absolute; 
+        right: 6px;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background: transparent;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+
+        @media (max-width: 767px) {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__input-container:focus-within &__button {
+        opacity: 1;
+    }
+}

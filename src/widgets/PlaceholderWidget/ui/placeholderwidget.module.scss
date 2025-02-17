@@ -1,0 +1,32 @@
+@use '../../../shared/styles/colors.scss';
+@use '../../../shared/styles/typography.scss';
+
+.placeholder-widget {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    padding: 40px;
+    background-color: colors.$color-06;
+    width: 760px;
+    height: 300px;
+
+    &__text {
+        @include typography.title-semibold-24;
+        color: colors.$color-01;
+
+        @media (max-width: 1024px) {
+            @include typography.headline-semibold-18-mobile;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        width: 360px;
+        padding: 28px;
+    }
+
+    @media (max-width: 767px) {
+        width: 340px;
+        padding: 28px;
+    }
+}

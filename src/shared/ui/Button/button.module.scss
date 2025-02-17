@@ -1,0 +1,37 @@
+@use '../../styles/colors.scss';
+@use '../../styles/typography.scss';
+
+.button {
+	padding: 12px 42px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 50px;
+	height: 44px;
+	background-color: colors.$color-01;
+	transition: background-color 0.3s ease, color 0.3s ease;
+
+	@media (hover: hover) {
+        &:hover {
+			background-color: colors.$color-05;
+	
+			.button__text {
+				color: colors.$color-02;
+			}
+		}
+    }
+
+	@media (max-width: 767px) {
+		height: 42px;
+	}
+
+	&__text {
+		@include typography.text2-semibold-16;
+		color: colors.$color-06;
+		transition: color 0.3s ease;
+
+		@media (max-width: 767px) {
+			@include typography.text2-semibold-14-mobile;
+		}
+	}
+}

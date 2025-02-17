@@ -1,0 +1,88 @@
+$font-family-base: 'Manrope', sans-serif;
+$font-weight-semibold: 600;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+
+@mixin title-semibold-24 {
+    font-family: $font-family-base;
+    font-size: 24px;
+    font-weight: $font-weight-semibold;
+}
+  
+@mixin headline-semibold-20 {
+    font-family: $font-family-base;
+    font-size: 20px;
+    font-weight: $font-weight-semibold;
+}
+
+@mixin text1-semibold-18 {
+    font-family: $font-family-base;
+    font-size: 18px;
+    font-weight: $font-weight-semibold;
+}
+  
+@mixin text1-medium-18 {
+    font-family: $font-family-base;
+    font-size: 18px;
+    font-weight: $font-weight-medium;
+}
+  
+@mixin text2-semibold-16 {
+    font-family: $font-family-base;
+    font-size: 16px;
+    font-weight: $font-weight-semibold;
+}
+  
+@mixin text2-medium-16 {
+    font-family: $font-family-base;
+    font-size: 16px;
+    font-weight: $font-weight-medium;
+}
+  
+@mixin caption-regular-14 {
+    font-family: $font-family-base;
+    font-size: 14px;
+    font-weight: $font-weight-regular;
+}
+  
+@mixin title1-semibold-24-mobile {
+    font-family: $font-family-base;
+    font-size: 24px;
+    font-weight: $font-weight-semibold;
+}
+  
+@mixin headline-semibold-18-mobile {
+    font-family: $font-family-base;
+    font-size: 18px;
+    font-weight: $font-weight-semibold;
+}
+  
+@mixin text1-semibold-16-mobile {
+    font-family: $font-family-base;
+    font-size: 16px;
+    font-weight: $font-weight-semibold;
+}
+  
+@mixin text1-medium-16-mobile {
+    font-family: $font-family-base;
+    font-size: 16px;
+    font-weight: $font-weight-medium;
+}
+  
+@mixin text2-semibold-14-mobile {
+    font-family: $font-family-base;
+    font-size: 14px;
+    font-weight: $font-weight-semibold;
+}
+  
+@mixin text2-medium-14-mobile {
+    font-family: $font-family-base;
+    font-size: 14px;
+    font-weight: $font-weight-medium;
+}
+  
+@mixin caption2-semibold-10-mobile {
+    font-family: $font-family-base;
+    font-size: 10px;
+    font-weight: $font-weight-semibold;
+}

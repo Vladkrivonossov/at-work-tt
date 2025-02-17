@@ -1,0 +1,99 @@
+@use '../../../shared/styles/colors.scss';
+@use '../../../shared/styles/typography.scss';
+
+.user-card {
+	display: flex;
+	justify-content: space-between;
+	border-radius: 16px;
+	width: 360px;
+	height: 168px;
+	background-color: colors.$color-06;
+	padding: 24px;
+
+	&__avatar {
+		& img {
+			width: 112px;
+			height: 120px;
+			border-radius: 8px;
+
+			@media (max-width: 768px) {
+				width: 120px;
+				height: 110px;
+			}
+		}
+	}
+
+	&__info {
+		max-width: 180px;
+
+		@media (max-width: 768px) {
+			max-width: 130px;
+		}
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__name {
+		@include typography.headline-semibold-20;
+		color: colors.$color-accent;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @media (max-width: 768px) {
+            @include typography.headline-semibold-18-mobile;
+        }
+	}
+
+	&__country {
+		@include typography.caption-regular-14;
+		color: colors.$color-03;
+		margin-top: 40px;
+
+        @media (max-width: 768px) {
+            @include typography.caption2-semibold-10-mobile;
+        }
+	}
+
+	&__company {
+		@include typography.text2-medium-16;
+		color: colors.$color-02;
+		white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @media (max-width: 768px) {
+            @include typography.text2-medium-14-mobile;
+        }
+	}
+
+    &--archived {
+	
+		.user-card__avatar {
+			filter: grayscale(100%);
+
+		}
+
+        .user-card__name {
+          color: colors.$color-02; 
+        }
+    
+        .user-card__company {
+          color: colors.$color-03; 
+        }
+    
+        .user-card__country {
+          color: colors.$color-04; 
+        }
+    }
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		width: 150px;
+		height: 240px;
+        padding: 16px;
+	}
+}

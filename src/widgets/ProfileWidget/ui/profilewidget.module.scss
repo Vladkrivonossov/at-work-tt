@@ -1,0 +1,36 @@
+@use '../../../shared/styles/colors.scss';
+
+.profile-widget {
+    padding: 40px;
+    border-radius: 16px;
+    background-color: colors.$color-06;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 360px;
+
+    &__avatar {
+        
+        & img {
+            border-radius: 8px;
+            width: 280px;
+            height: 485px;
+
+            @media (max-width: 767px) {
+                width: 287px;
+                height: 187px;
+            }
+        }
+    }
+
+    &__sections {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 28px;
+        max-width: 340px;
+    }
+}

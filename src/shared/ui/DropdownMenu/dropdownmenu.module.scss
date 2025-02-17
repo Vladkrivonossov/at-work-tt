@@ -1,0 +1,47 @@
+@use '../../styles/colors.scss';
+@use '../../styles/typography.scss';
+
+.dropdown {
+    position: relative;
+
+    &__button {
+        border: none;
+        background: none;
+        padding: 0;
+    }
+
+    &__options {
+        position: absolute;
+        padding: 8px;
+        right: 0;
+        width: 200px;
+        top: 100%;
+        background-color: colors.$color-06; 
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        border-radius: 12px;
+
+        @media (max-width: 767px) { 
+            width: 160px;
+        }
+    }
+
+    &__option {
+        color: colors.$color-01;
+        cursor: pointer;
+        padding: 8px;
+        @include typography.text2-medium-16;
+
+        @media (max-width: 767px) {
+            @include typography.text2-medium-14-mobile;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                color: colors.$color-accent;
+            }
+        }
+    }
+}
+

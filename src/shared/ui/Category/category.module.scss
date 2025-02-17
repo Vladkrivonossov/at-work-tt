@@ -1,0 +1,29 @@
+@use '../../styles/typography.scss';
+@use '../../styles/colors.scss';
+
+.category {
+
+    &__text {
+        @include typography.text2-medium-16;
+        color: colors.$color-03;
+        cursor: pointer;
+
+        &--active {
+            color: colors.$color-01;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                color: colors.$color-accent;
+            }
+        }
+
+        @media (max-width: 767px) {
+            @include typography.text2-medium-14-mobile;
+        }
+    }
+
+    &__underline {
+        border: 1px solid colors.$color-04;
+    }
+}

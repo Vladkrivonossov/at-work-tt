@@ -1,0 +1,38 @@
+@use './colors.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: colors.$color-05;
+}
+
+ul, li {
+    margin: 0;          
+    padding: 0;         
+    list-style: none;   
+}
+
+.icon {
+    color: colors.$color-01;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    @media (hover: hover) {
+        &:hover {
+            color: colors.$color-accent;
+        }
+    }
+
+    &:active {
+        color: colors.$color-02;
+    }
+
+    @media (max-width: 767px) {
+        width: 20px;
+        height: 20px;
+    }
+}

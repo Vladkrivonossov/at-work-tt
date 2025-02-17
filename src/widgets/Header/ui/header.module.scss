@@ -1,0 +1,53 @@
+@use '../../../shared/styles/typography.scss';
+@use '../../../shared/styles/colors.scss';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 150px;
+    background-color: colors.$color-06;
+
+    &__logo {
+        
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__icons {
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &__user-profile {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__user-photo {
+
+        & img {
+            width: 20px;
+            height: 20px;
+            border-radius: 50px;
+        }
+    }
+
+    &__user-name {
+        @include typography.text1-medium-18;
+        color: colors.$color-02;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding: 13px 16px;
+    }
+}
+
