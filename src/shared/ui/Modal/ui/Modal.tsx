@@ -9,7 +9,7 @@ interface ModalProps {
   text: string;
 }
 
-export const Modal: React.FC<ModalProps> = ({ onClose, autoCloseDelay = 1231234000, text }) => {
+export const Modal: React.FC<ModalProps> = ({ onClose, autoCloseDelay = 4000, text }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   const handleClose = () => {

@@ -41,7 +41,6 @@ export const ProfileForm: FC<ProfileFormProps> = ({ user }) => {
   };
 
   const handleChange = (field: keyof ProfileFormData) => (value: string) => {
-    console.log(field, value);
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
