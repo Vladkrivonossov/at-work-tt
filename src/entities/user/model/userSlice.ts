@@ -65,7 +65,16 @@ const userSlice = createSlice({
         state.error = null;
       })
       .addCase(fetchUsersThunk.fulfilled, (state, action) => {
-        state.active = action.payload;
+        const archivedUsersMap = new Map<number, IUser>();
+        
+        state.archived.forEach((user) => {
+          archivedUsersMap.set(user.id, user);
+        });
+
+        state.active = action.payload.filter(
+          (user: IUser) => !archivedUsersMap.has(user.id)
+        );
+
         state.loading = false;
       })
       .addCase(fetchUsersThunk.rejected, (state, action) => {

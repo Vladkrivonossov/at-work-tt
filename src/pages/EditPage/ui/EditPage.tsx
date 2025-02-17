@@ -3,24 +3,18 @@ import { BackArrowIcon } from '../../../shared/ui/icons/backarrowicon/BackArrowI
 import { ProfileWidget } from '../../../widgets/ProfileWidget/ui/ProfileWidget';
 import styles from './editpage.module.scss';
 import { ProfileDataWidget } from '../../../widgets/ProfileDataWidget/ui/ProfileDataWidget';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { PlaceholderWidget } from '../../../widgets/PlaceholderWidget/ui/PlaceholderWidget';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { selectUserById } from '../../../entities/user/model/selectors';
-import { AppDispatch, RootState } from '../../../app/store';
-import { fetchUsersThunk } from '../../../entities/user/model/userSlice';
+import { RootState } from '../../../app/store';
 import { Loader } from '../../../shared/ui/Loader/Loader';
 
 export const EditPage = () => {
   const [currentWidget, setCurrentWidget] = useState<string>('Данные профиля');
-  const dispatch = useDispatch<AppDispatch>();
   const { userId } = useParams();
   const editableUser = useSelector(
     (state: RootState) => selectUserById(Number(userId))(state));
-
-   useEffect(() => {
-    dispatch(fetchUsersThunk());
-   }, [dispatch]);
 
   const handleCategorySelect = (category: string) => {
     setCurrentWidget(category);
