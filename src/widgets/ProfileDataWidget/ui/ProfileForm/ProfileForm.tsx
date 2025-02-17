@@ -64,8 +64,6 @@ export const ProfileForm: FC<ProfileFormProps> = ({ user }) => {
 
     dispatch(updateUser({ id: user.id, updates }));
     handleOpenModal();
-
-    console.log('Пользователь обновлён:', updates);
   };
 
   return (

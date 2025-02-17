@@ -44,7 +44,7 @@ export const InputField: FC<InputFieldProps> = ({ value, placeholder, onChange, 
                     className={styles.field__input}
                 />
                 {inputValue && (
-                    <button className={styles.field__button} onClick={handleClear}>
+                    <button type='button' className={styles.field__button} onClick={handleClear}>
                         <CrossIcon />
                     </button>
                 )}
